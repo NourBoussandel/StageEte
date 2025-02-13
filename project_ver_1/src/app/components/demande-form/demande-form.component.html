@@ -1,0 +1,58 @@
+<div class="container-form">
+  <h2 mat-dialog-title>Deposer une demande télétravail</h2>
+
+  <div mat-dialog-content >
+    <form [formGroup]="form_demande" >
+      <input type="hidden" formControlName="id_demande" value="id_demande" />
+      <input type="hidden" formControlName="id_adresse" value="id_adresse" />
+
+      <mat-form-field>
+        <mat-label>Choisir une date de debut</mat-label>
+        <input formControlName="date_debut" matInput [matDatepicker]="pickerDebut"[matDatepickerFilter]="myHolidayFilter">
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="pickerDebut"></mat-datepicker-toggle>
+        <mat-datepicker #pickerDebut></mat-datepicker>
+        <mat-error *ngIf="form_demande.get('date_debut')!.errors?.['required']">
+          La date de début est obligatoire
+        </mat-error>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Choisir une date de fin</mat-label>
+        <input  formControlName="date_fin" matInput [matDatepicker]="pickerFin" [matDatepickerFilter]="myHolidayFilter">
+        <mat-hint>DD/MM/YYYY</mat-hint> 
+        <mat-datepicker-toggle matIconSuffix [for]="pickerFin"></mat-datepicker-toggle>
+        <mat-datepicker #pickerFin></mat-datepicker>
+        <mat-error *ngIf="form_demande.get('date_fin')!.errors?.['required']">
+          La date de fin est obligatoire
+        </mat-error>
+        <mat-error *ngIf="form_demande.errors?.['dateRangeInvalid']">
+          La date de début doit être antérieure à la date de fin
+        </mat-error>
+        <mat-error *ngIf="form_demande.get('date_fin')!.errors?.[('dateConflict')]">Le choix de dates entre en conflit avec les dates de télétravail acceptées</mat-error>
+
+        </mat-form-field>
+        <div class="input-container">
+          <input type="text" placeholder="Avez-vous des remarques à ajouter" style="height: 60px;" formControlName="description">
+        </div>  
+        
+        <mat-form-field>
+          <mat-label>Adresses</mat-label>
+          <mat-select  formControlName="id_adresse">
+            <mat-option *ngFor="let adresse of adresses_list" [value]="adresse.id_adresse">
+              {{ adresse.lieu }} {{ adresse.region }} {{ adresse.ville }} {{ adresse.pays }} {{ adresse.code_postal }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> 
+        
+    </form>
+   
+  </div>
+<div class="button-container">
+  <button mat-raised-button (click)="annuler()"> annuler</button>
+
+  <button mat-raised-button class="custom-add-button" (click)="save_demande()">{{ actionBtn }}</button>
+</div>
+
+</div>
+

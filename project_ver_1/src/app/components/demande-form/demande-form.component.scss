@@ -1,0 +1,35 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-container {
+  height: 80px; /* Adjust the height as needed */
+}
+
+.input-container input {
+  width: 100%;
+  height: 100%;
+}
+
+
+.container-form mat-form-field {
+  width: 100%;
+  margin-bottom: 1rem; /* Optional: Add some space between form fields */
+}
+.custom-add-button {
+  color: white; 
+  background-color: black;/* Couleur du texte en blanc */
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5%; /* Ajustez cette valeur selon vos préférences */
+  justify-content: center;
+}
+
+
+
+
+

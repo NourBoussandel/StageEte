@@ -1,0 +1,30 @@
+.dialog-title {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .dialog-content {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .dialog-input-field {
+    width: 100%;
+  }
+  
+  .dialog-actions {
+    justify-content: center;
+  }
+  
+  .custom-add-button {
+    color: white; 
+    background-color: black;/* Couleur du texte en blanc */
+  }
+  .button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5%; /* Ajustez cette valeur selon vos préférences */
+    justify-content: center;
+  }
+ 
+  

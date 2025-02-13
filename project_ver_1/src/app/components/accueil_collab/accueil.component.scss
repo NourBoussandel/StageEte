@@ -1,0 +1,77 @@
+*{
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+
+} 
+.keyword {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 20px;
+  
+  
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  background-color: #ffc107;
+}
+
+::ng-deep.example-custom-date-class::after {
+  counter-increment: section; 
+  content:attr(aria-label);
+  border-radius: 50%;
+  background:#ffc107;
+  top: 3% !important;
+    left: 17% !important;
+    width: 40px !important;
+    height: 40px !important;
+    height: 1rem;
+    line-height:1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ 
+  display:block;
+position: absolute;
+
+}
+
+
+
+::ng-deep.normal>.mat-calendar-body-cell-content,
+::ng-deep.example-custom-date-class>.mat-calendar-body-cell-content,
+::ng-deep.todays_class>.mat-calendar-body-cell-content
+
+{
+  padding-bottom: 1.2rem;
+border-radius:50% !important;
+background-color: transparent !important;
+border: none !important;
+}
+
+.table-container h2  {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color:black;
+}
+.calendar-container h2{
+  color:black;
+  text-align: left; 
+}
+
+.calendar-container {
+  
+  width: 500px;
+  flex: 1; /* Occupe autant d'espace que possible */
+  padding: 20px; /* Espace autour du calendrier */
+  border-right: 1px solid #ccc; /* Ajouter une bordure à droite */
+  box-sizing: border-box; /* Inclure les bordures dans le calcul de la largeur */
+}
+
+.table-container {
+  flex: 2; /* Occupe plus d'espace que le calendrier */
+  padding: 20px; /* Espace autour du tableau */
+  box-sizing: border-box; /* Inclure les bordures dans le calcul de la largeur */
+}

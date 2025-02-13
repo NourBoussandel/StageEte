@@ -1,0 +1,39 @@
+<div class="content" >
+  <h2 mat-dialog-title class="dialog-container">Ajouter une adresse</h2>
+    <form [formGroup]="form_adresse" >
+      <mat-form-field class="example-full-width">
+          <mat-label>lieu</mat-label>
+          <textarea matInput formControlName="lieu" ></textarea>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>region</mat-label>
+          <textarea matInput formControlName="region"></textarea>
+        </mat-form-field>
+     
+        <mat-form-field class="example-full-width">
+          <mat-label>ville</mat-label>
+          <textarea matInput formControlName="ville"></textarea>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>pays</mat-label>
+          <textarea matInput formControlName="pays"></textarea>
+        </mat-form-field>
+     
+        
+        <mat-form-field class="example-full-width">
+          <mat-label>code_postal</mat-label>
+          <input  formControlName="code_postal" matInput #postalCode maxlength="4" placeholder="Ex. 7035" value="7035">
+        </mat-form-field>
+  </form>
+
+  
+ 
+  <div style="display: flex; gap: 10px; margin-left:100px;">
+    <button mat-raised-button (click)="annuler()"> annuler</button>
+  
+    <button mat-raised-button class="custom-add-button" (click)="save_adresse()">{{ actionBtn }}</button>
+  </div>
+</div>
+

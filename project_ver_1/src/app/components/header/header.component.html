@@ -1,0 +1,40 @@
+<mat-toolbar>
+  <mat-toolbar-row class="justify-content-between">
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="row mr-2 ml-auto">
+      <ul class="row m-0 align-items-center">
+        <li>
+          <div class="user-container">
+            <button mat-button [matMenuTriggerFor]="userMenu" class="nom_employe">
+              {{ fullName }}
+              <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+            </button>
+            <button mat-icon-button [matMenuTriggerFor]="notificationsMenu"   [class.has-new-notification]="hasNewNotification">
+              <mat-icon>notifications</mat-icon>
+            </button>
+          </div>
+          <!-- Use matMenuTriggerFor on the button -->
+          
+          <mat-menu #userMenu="matMenu"> <!-- Add a template reference variable userMenu -->
+            <button mat-menu-item (click)="logout()">
+              <mat-icon>exit_to_app</mat-icon>
+              Deconnexion
+            </button>
+          </mat-menu>
+          
+        </li>
+      </ul>
+      
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-menu #notificationsMenu="matMenu">
+  <h2 >Notifications</h2>
+  <div class="notification-list">
+    <div class="notification-item" *ngFor="let notification of notifications" [class.seen]="notification.est_vue" (click)="markNotificationAsSeen(notification)">
+      {{ notification.corps }}
+    </div>
+  </div>
+</mat-menu>

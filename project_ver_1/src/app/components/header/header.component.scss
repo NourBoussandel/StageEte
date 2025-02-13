@@ -1,0 +1,68 @@
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+.user-container {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+}
+
+/* Add some space between full name and notifications icon */
+.user-container .user-image-icon {
+  margin-left: 8px;
+}
+mat-toolbar {
+  background: #f7f7f7;
+}
+.has-new-notification mat-icon {
+  color: #ffc107;
+}
+
+::ng-deep {
+  /* Center-align the title "Notifications" */
+   h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Adjust the height of the notification-list */
+  .notification-list {
+    min-height: 300px; 
+    max-height: 800px;
+    overflow-y: auto;
+    padding: 10px;
+  }
+
+  /* Styles for the notification items */
+  .notification-item {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+}
+.notification-item.seen {
+  background-color: #f0f0f0; /* Change to your desired gray color */
+}
+.user-container .nom_employe{
+  color: black !important;
+}
+
+
+  
+  
+  
+
+

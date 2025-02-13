@@ -1,0 +1,8 @@
+<div class="notification-bar" (click)="voirNotifications()">
+  <div class="notification-item" *ngFor="let notification of notifications">
+    <div class="notification-content" [class.seen]="notification.est_vue" (click)="markNotificationAsSeen(notification)">
+      {{ notification.corps }}
+    </div>
+    
+  </div>
+</div>

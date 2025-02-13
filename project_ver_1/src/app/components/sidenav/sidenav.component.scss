@@ -1,0 +1,37 @@
+:host {
+    .mat-icon {
+      vertical-align: middle;
+      margin-right: 0.5rem;
+    }
+  }
+  .custom-background{
+    width: 600px;
+  }
+  a:nth-child(1){
+    margin-top: 30px;
+  }
+ 
+ 
+  .custom-icons {
+    color: white;
+  }
+ 
+  .mat-mdc-list-base {
+    --mdc-list-list-item-label-text-color: white;
+    --mdc-list-list-item-supporting-text-color: rgba(0, 0, 0, 0.54);
+    --mdc-list-list-item-leading-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-trailing-supporting-text-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-trailing-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-selected-trailing-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-disabled-label-text-color: white;
+    --mdc-list-list-item-disabled-leading-icon-color: black;
+    --mdc-list-list-item-disabled-trailing-icon-color: black;
+    --mdc-list-list-item-hover-label-text-color: white;
+    --mdc-list-list-item-hover-leading-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-hover-trailing-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-list-list-item-focus-label-text-color: white;
+    --mdc-list-list-item-hover-state-layer-color: black;
+    --mdc-list-list-item-hover-state-layer-opacity: 0.04;
+    --mdc-list-list-item-focus-state-layer-color: black;
+    --mdc-list-list-item-focus-state-layer-opacity: 0.12;
+}

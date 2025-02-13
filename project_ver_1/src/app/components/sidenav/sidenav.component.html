@@ -1,0 +1,20 @@
+<div class="custom-background" >
+  <mat-nav-list >
+    <a *ngIf="!isManager" mat-list-item routerLink="/accueil_collab" class="custom-text" >
+      <mat-icon class="custom-icons">home</mat-icon> Accueil
+    </a>
+    <a *ngIf="isManager" mat-list-item routerLink="/accueil_manager" class="custom-text">
+      <mat-icon class="custom-icons">home</mat-icon> Accueil
+    </a>
+    <a mat-list-item  routerLink="/dashboard_employe" class="custom-text">
+      <mat-icon class="custom-icons">person</mat-icon> Mon profil
+    </a>
+    <a *ngIf="!isManager" mat-list-item  routerLink="/list-demande" class="custom-text">
+      <mat-icon class="custom-icons">dashboard</mat-icon> Mes demandes
+    </a>
+    <a *ngIf="isManager" mat-list-item  routerLink="/historique-dmd-for-manager" class="custom-text">
+      <mat-icon class="custom-icons">dashboard</mat-icon> Demandes de mon équipe
+    </a>
+    
+  </mat-nav-list>
+</div>

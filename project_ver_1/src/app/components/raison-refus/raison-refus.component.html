@@ -1,0 +1,17 @@
+<h2 mat-dialog-title class="dialog-title">Raisons du refus de la demande</h2>
+
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field appearance="fill" class="dialog-input-field">
+    <textarea  matInput [(ngModel)]="raisons_refus" placeholder="Pourquoi vous refusez la demande ?" ></textarea>
+  </mat-form-field>
+</div>
+
+
+
+<div class="button-container">
+  <button mat-raised-button (click)="annuler()"> annuler</button>
+
+  <button mat-raised-button class="custom-add-button" (click)="valider_refus()">Valider</button>
+</div>
+  
+  

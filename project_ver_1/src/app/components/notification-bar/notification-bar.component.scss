@@ -1,0 +1,27 @@
+.notification-bar {
+  width: 800px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.notification-item {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.notification-content {
+  font-weight: bold;
+}
+
+.notification-content.seen {
+  text-decoration: line-through;
+}
+
+.mark-seen-btn {
+  padding: 3px 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+

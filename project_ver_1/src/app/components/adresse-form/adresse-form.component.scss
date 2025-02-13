@@ -1,0 +1,21 @@
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content form mat-form-field {
+    height: 80px !important;
+  }
+  
+  .example-full-width {
+    width: 300px;
+ margin-left: 50px;
+  }
+ 
+  
+  .custom-add-button {
+    color: white; 
+    background-color: black;/* Couleur du texte en blanc */
+  }
+  

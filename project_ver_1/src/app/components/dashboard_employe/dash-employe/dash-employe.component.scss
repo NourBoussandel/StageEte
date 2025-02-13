@@ -1,0 +1,81 @@
+
+.centered-chip-list {
+  display: flex;
+  align-items: center; /* Center the chips horizontally */
+  justify-content: center; 
+  /* Center the chips vertically */
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+.user-profile {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.profile-header{
+  margin-bottom: 40px;
+  .icon-with-text {
+      display: flex;
+     
+       h2 {
+        margin: 0 20px;
+      }
+  
+      mat-icon {
+        font-size: 26px; /* Taille des autres icônes */
+      }
+}}
+
+.profile-content {
+  margin-bottom: 0px;
+
+  .icon-with-text {
+    display: flex;
+    
+
+     p,label {
+      margin: 0 10px;
+    }
+
+    mat-icon {
+      font-size: 20px; /* Taille des autres icônes */
+    }
+  }
+  .icon-with-text:not(:last-child) {
+      margin-bottom: 10px;
+    }
+   
+}
+
+.mat-mdc-raised-button{
+  background-color: black;
+  }
+  .custom-add-button {
+    color: white; /* Couleur du texte en blanc */
+  }
+  
+::ng-deep .mat-mdc-standard-chip .mdc-evolution-chip__action--primary
+ {  border-radius: 10px;
+  background-color: #ffc107 !important;}
+
+
+
+
